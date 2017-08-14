@@ -108,6 +108,8 @@ fi
 echo "[i] unblocking certain websites - fix by pizzadude"
 
 sed -i '/0.0.0.0\tadf.ly/d' /etc/hosts
+sed -i '/0.0.0.0\tip-api.com/d' /etc/hosts
+sed -i '/0.0.0.0\tpro.ip-api.com/d' /etc/hosts
 
 echo "[i] Finished"
 exit 0

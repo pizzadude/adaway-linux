@@ -116,6 +116,7 @@ sed -i '/0.0.0.0\tads.blizzard.com/d' /etc/hosts
 sed -i '/0.0.0.0\tviglink.com/d' /etc/hosts
 sed -i '/0.0.0.0\tredirect.viglink.com/d' /etc/hosts
 sed -i '/0.0.0.0\tbit.ly/d' /etc/hosts
+sed -i '/0.0.0.0\tsites.google.com/d' /etc/hosts
 
 echo "[i] Finished"
 exit 0

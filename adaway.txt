@@ -16,8 +16,6 @@ TMPDIR="/tmp/adaway-linux/"
 
 set -e
 
-cd /home/pizzadude/adaway-linux
-
 # show help
 if [ "${1}" == "-h" ] || [ "${1}" == "--help" ] ; then
 
@@ -84,13 +82,10 @@ cat << EOF > "${TMPDIR}hosts.header"
 # [!] This file will be updated by the ad-block-script called adaway-linux.
 # [!] If you want to edit /etc/hosts, please edit the original file in ${HOSTSORIG}.
 # [!] Content from there will be added to the top of this file.
-
 EOF
 cat "${HOSTSORIG}" >> "${TMPDIR}hosts.header"
 cat << EOF >> "${TMPDIR}hosts.header"
-
 # Ad Servers:
-
 EOF
 cat "${TMPDIR}hosts.header" "${TMPDIR}hosts.adservers" > "${TMPDIR}hosts"
 
@@ -119,16 +114,6 @@ sed -i '/0.0.0.0\tviglink.com/d' /etc/hosts
 sed -i '/0.0.0.0\tredirect.viglink.com/d' /etc/hosts
 sed -i '/0.0.0.0\tbit.ly/d' /etc/hosts
 sed -i '/0.0.0.0\tsites.google.com/d' /etc/hosts
-sed -i '/0.0.0.0\tadfoc.us/d' /etc/hosts
-sed -i '/0.0.0.0\tcdn.adfoc.us/d' /etc/hosts
-sed -i '/0.0.0.0\twww.adfoc.us/d' /etc/hosts
-sed -i '/0.0.0.0\tapi.ipinfodb.com/d' /etc/hosts
-sed -i '/0.0.0.0\ttrackersimulator.org/d' /etc/hosts
-sed -i '/0.0.0.0\tdo-not-tracker.org/d' /etc/hosts
-sed -i '/0.0.0.0\teviltracker.net/d' /etc/hosts
-echo "107.170.15.247 tuner.pandora.com" >> /etc/hosts
-echo "0.0.0.0 vrty.org" >> /etc/hosts
-echo "0.0.0.0 searchguide.level3.com" >> /etc/hosts
-echo "0.0.0.0 www.searchguide.level3.com" >> /etc/hosts
+
 echo "[i] Finished"
 exit 0

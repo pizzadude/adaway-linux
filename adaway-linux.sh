@@ -28,8 +28,7 @@ if [ "${1}" == "-h" ] || [ "${1}" == "--help" ] ; then
     echo "Usage:"
     echo "You have only to run this script to add the ad-domains to your hosts file or to update them."
     echo "Parameters:"
-    echo "    -h    --help      show help"
-    echo "    -s    --simulate  simulate, but don't replace /etc/hosts"
+    echo "    -h    --help      show help"    echo "    -s    --simulate  simulate, but don't replace /etc/hosts"
     echo ""
     exit 0
 
@@ -126,9 +125,20 @@ sed -i '/0.0.0.0\tapi.ipinfodb.com/d' /etc/hosts
 sed -i '/0.0.0.0\ttrackersimulator.org/d' /etc/hosts
 sed -i '/0.0.0.0\tdo-not-tracker.org/d' /etc/hosts
 sed -i '/0.0.0.0\teviltracker.net/d' /etc/hosts
-echo "107.170.15.247 tuner.pandora.com" >> /etc/hosts
+sed -i '/0.0.0.0\tfreegeoip.net/d' /etc/hosts
+sed -i '/0.0.0.0\tredirector.gvt1.com/d' /etc/hosts
+sed -i '/0.0.0.0\tthepiratebay.org/d' /etc/hosts
+#echo "107.170.15.247 tuner.pandora.com" >> /etc/hosts
 echo "0.0.0.0 vrty.org" >> /etc/hosts
 echo "0.0.0.0 searchguide.level3.com" >> /etc/hosts
 echo "0.0.0.0 www.searchguide.level3.com" >> /etc/hosts
+echo "0.0.0.0 screencloud.net" >> /etc/hosts
+sed -i '/0.0.0.0\tbrowser.pipe.aria.microsoft.com/d' /etc/hosts
+#echo "0.0.0.0 ktechpit.com" >> /etc/hosts
+
+echo "Restoring selinux label of /etc/hosts..."
+sudo /sbin/restorecon -v /etc/hosts
+
 echo "[i] Finished"
+
 exit 0

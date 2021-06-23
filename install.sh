@@ -60,11 +60,11 @@ case "${1}" in
                 echo "[i] You can add urls by editing this file manually."
                 cat << EOF > "${SRCLST}"
 https://adaway.org/hosts.txt
-https://hosts-file.net/ad_servers.txt
 https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
-http://winhelp2002.mvps.org/hosts.txt
-http://sbc.io/hosts/hosts
-http://someonewhocares.org/hosts/hosts
+https://winhelp2002.mvps.org/hosts.txt
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+https://someonewhocares.org/hosts/hosts
+https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
 EOF
                 echo "[i] File created."
 

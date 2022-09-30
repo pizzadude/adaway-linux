@@ -49,5 +49,3 @@ The list of blocked domains is fetched and can be updated from servers listed in
 Please report bugs or fork this repo and help to improve this script.
 Thank you ;)
 _____________________________
-
-i unblocked adf.ly because >muh minecraft mods - pizzadude

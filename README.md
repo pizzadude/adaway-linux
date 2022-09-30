@@ -1,4 +1,4 @@
-# adaway-linux
+# adaway-linux - personal fork
 
 A small script to block ad-containing sites in your whole Linux system.
 

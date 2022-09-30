@@ -65,6 +65,7 @@ https://winhelp2002.mvps.org/hosts.txt
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 https://someonewhocares.org/hosts/hosts
 https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+https://pastebin.com/raw/TkmHgBrM
 EOF
                 echo "[i] File created."
 

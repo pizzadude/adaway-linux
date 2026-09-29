@@ -154,6 +154,11 @@ echo "0.0.0.0 screencloud.net" >> /etc/hosts
 sed -i '/0.0.0.0\tbrowser.pipe.aria.microsoft.com/d' /etc/hosts
 #echo "0.0.0.0 ktechpit.com" >> /etc/hosts
 sed -i '/0.0.0.0\tcrl.verisign.net/d' /etc/hosts
+echo "0.0.0.0 api.ipify.org" >> /etc/hosts
+echo "0.0.0.0 api6.ipify.org" >> /etc/hosts
+echo "0.0.0.0 api64.ipify.org" >> /etc/hosts
+echo "0.0.0.0 api.iplocation.net" >> /etc/hosts
+sed -i '/0.0.0.0\tt.co/d' /etc/hosts
 
 echo "Restoring selinux label of /etc/hosts..."
 sudo /sbin/restorecon -v /etc/hosts
